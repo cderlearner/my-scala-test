@@ -21,14 +21,18 @@ class ScalaApp {
 //  println(fields)
 //  println(stmt)
 
-  var serviceMap = {
-    Map(
-      "account" -> "4",
-      "accountBinding" -> "3",
-      "accountSettings" -> "2")
-  }
+//  var serviceMap = {
+//    Map(
+//      "account" -> "4",
+//      "accountBinding" -> "3",
+//      "accountSettings" -> "2")
+//  }
+//
+//  serviceMap += ("account" -> "6")
+//
+//  println(serviceMap)
 
-  serviceMap += ("account" -> "6")
-
-  println(serviceMap)
+  var ip = "11"
+  var port = "7950"
+  println(s"$ip:" + port)
 }

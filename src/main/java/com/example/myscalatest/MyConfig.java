@@ -15,7 +15,7 @@ public class MyConfig {
     public Test toTest() {
         Test test = new Test();
         test.setId(1);
-        System.out.println("Test Id:" + test.getId());
+        System.out.println("LJX--------- Test Id:" + test.getId());
         return test;
     }
 
