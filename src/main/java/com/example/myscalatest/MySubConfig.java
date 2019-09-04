@@ -6,7 +6,6 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class MySubConfig extends MyConfig {
 
-    @Override
     @Bean
     public Test toTest() {
         Test test = new Test();

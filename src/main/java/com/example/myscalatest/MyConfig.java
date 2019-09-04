@@ -2,6 +2,9 @@ package com.example.myscalatest;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.DependsOn;
+
+import javax.annotation.PostConstruct;
 
 @Configuration
 public class MyConfig {
@@ -15,17 +18,23 @@ public class MyConfig {
     public Test toTest() {
         Test test = new Test();
         test.setId(1);
-        System.out.println("LJX--------- Test Id:" + test.getId());
+        System.out.println("Test Id:" + test.getId());
         return test;
     }
 
     @Bean
+    @DependsOn(value = {"toTest"})
     public MyTestBean toMyTestBean() {
         return new MyTestBean();
     }
 
     public static class Test {
         private long id;
+
+        @PostConstruct
+        protected void init() {
+            System.out.println("--------------");
+        }
 
         public long getId() {
             return id;
