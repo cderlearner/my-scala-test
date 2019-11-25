@@ -50,7 +50,7 @@ public class DESUtil {
         // byte[] desKey = DESUtil.initKey();
         // System.out.println("DES KEY : " + Hex.encodeHexString(desKey));
 
-        String DATA = "13810522372";
+        String DATA = "13810522371";
         byte[] desKey = Hex.decodeHex("cd1c584fba940b9d".toCharArray());
         byte[] desResult = DESUtil.encrypt(DATA.getBytes(), desKey);
         System.out.println(DATA + "-》DES 加密结果：" + Hex.encodeHexString(desResult));
