@@ -3,6 +3,7 @@ package com.example.myscalatest;
 import org.junit.Test;
 
 import java.nio.charset.StandardCharsets;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class MyJwtTest {
 
@@ -28,5 +29,15 @@ public class MyJwtTest {
 
         String jwt = new JwtUtil().createJWT("1", "uc", System.currentTimeMillis());
         System.out.println(jwt);
+
+
+        String j = "jwt:eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJuYW1lIjoxMjMsImlzcyI6InVjIiwiZXhwIjoxNTc0OTk1MTY5fQ.VZ7vveGZ23m0TtAZNcLqYomykPXO_Ial389ldd4Zt2is5yzrWsFbd_JHNOgA3dnF9XsEabRbG48b3KF9rap_IQuF_H2kz4gMZtFXiOVejtlT5tge0GigLINDD4FTejNWW8v00g1rdIo-vnF1vuT921RhBornxU-k83Gu-1R0yhIwGOf1D_k0zAfFCqVsjHEqMXCfg0C00RWQfvrUWA-YrX2lVBpdnw4D6CFAwbCZKl-Y2OMFb1_hJMdgOOo2iemvzdcDh_SYsNbdemvUioWQuYp-_wu1BuFEJUQkkV56Llbm0mRDyhsBccXSfvPbA7uWm7VSY4hQ75GQKXKU6gkIyQ";
+        System.out.println(j.getBytes(StandardCharsets.UTF_8).length);
+
+        for (;;) {
+            System.out.println(ThreadLocalRandom.current().nextInt(100, 500));
+
+            Thread.sleep(1000L);
+        }
     }
 }

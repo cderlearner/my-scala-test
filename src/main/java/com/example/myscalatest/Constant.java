@@ -1,5 +1,7 @@
 package com.example.myscalatest;
 
+import org.apache.commons.lang3.tuple.Pair;
+
 public class Constant {
     /**
      * jwt
@@ -9,4 +11,6 @@ public class Constant {
     public static final int JWT_TTL = 60 * 60 * 1000;  //millisecond
     public static final int JWT_REFRESH_INTERVAL = 55 * 60 * 1000;  //millisecond
     public static final int JWT_REFRESH_TTL = 12 * 60 * 60 * 1000;  //millisecond
+
+    public static final Pair<Boolean, Integer> p = Pair.of(true, 1);
 }
